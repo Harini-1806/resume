@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+
+<center>
+<table border="1" cellpadding="10">
+
+<tr>
+    <td colspan="4">
+        <input type="text" id="display">
+    </td>
+</tr>
+
+<tr>
+    <td><button onclick="addValue('7')">7</button></td>
+    <td><button onclick="addValue('8')">8</button></td>
+    <td><button onclick="addValue('9')">9</button></td>
+    <td><button onclick="addValue('/')">/</button></td>
+</tr>
+
+<tr>
+    <td><button onclick="addValue('4')">4</button></td>
+    <td><button onclick="addValue('5')">5</button></td>
+    <td><button onclick="addValue('6')">6</button></td>
+    <td><button onclick="addValue('*')">*</button></td>
+</tr>
+
+<tr>
+    <td><button onclick="addValue('1')">1</button></td>
+    <td><button onclick="addValue('2')">2</button></td>
+    <td><button onclick="addValue('3')">3</button></td>
+    <td><button onclick="addValue('-')">-</button></td>
+</tr>
+
+<tr>
+    <td><button onclick="addValue('0')">0</button></td>
+    <td><button onclick="addValue('.')">.</button></td>
+    <td><button onclick="calculate()">=</button></td>
+    <td><button onclick="addValue('+')">+</button></td>
+</tr>
+
+<tr>
+    <td colspan="4">
+        <button onclick="clearDisplay()">Clear</button>
+    </td>
+</tr>
+
+</table>
+</center>
+
+<script>
+function addValue(value)
+{
+    document.getElementById("display").value += value;
+}
+
+function calculate()
+{
+    document.getElementById("display").value =
+    eval(document.getElementById("display").value);
+}
+
+function clearDisplay()
+{
+    document.getElementById("display").value = "";
+}
+</script>
+
+</body>
+</html>
